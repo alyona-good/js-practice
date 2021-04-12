@@ -1,0 +1,65 @@
+button,
+label,
+input {
+    cursor: pointer;
+}
+
+.quiz {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 60px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.quiz__container {
+    width: 600px;
+}
+
+.question {
+    margin-bottom: 30px;
+}
+
+.question__text {
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.question__options label{
+    font-weight: 100;
+}
+
+.option {
+    border-radius: 3px;
+}
+
+.option:hover{
+    background-color: #eee;
+}
+
+.option.wrong {
+    color: orangered;
+}
+
+.option.correct{
+    background-color:lightgreen;
+    color: #fff;
+}
+
+.question.missed {
+    border: 2px solid #333;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.buttons .check {
+    margin-right: 50px;
+}
+
+.btn {
+    padding: 5px 10px;
+}

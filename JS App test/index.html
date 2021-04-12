@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="quiz">
+        <div class="quiz__container">
+            <h1 class="quiz__header">Тест по Java Script</h1>
+
+                <div class="question__box">
+
+                        <div class="question question__1">
+                            <div class="question__text">
+                                Сколько типов данных в современном JS?
+                            </div>
+                            <div class="question__options">
+                                <div class="option option__1">
+                                    <input type="radio" id="opt-1-1" name="q1">
+                                    <label for="opt-1-1">6</label>
+                                </div>
+                                <div class="option option__2" data-correct="true">
+                                    <input type="radio" id="opt-2-1" name="q1">
+                                    <label for="opt-2-1">8</label>
+                                </div>
+                                <div class="option option__3">
+                                    <input type="radio" id="opt-3-1" name="q1">
+                                    <label for="opt-3-1">5</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question question__2">
+                            <div class="question__text">
+                                Чему равно typeof null?
+                            </div>
+                            <div class="question__options">
+                                <div class="option option__1">
+                                    <input type="radio" id="opt-1-2" name="q2">
+                                    <label for="opt-1-2">null</label>
+                                </div>
+                                <div class="option option__2">
+                                    <input type="radio" id="opt-2-2" name="q2">
+                                    <label for="opt-2-2">number</label>
+                                </div>
+                                <div class="option option__3" data-correct="true">
+                                    <input type="radio" id="opt-3-2" name="q2">
+                                    <label for="opt-3-2">object</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question question__3">
+                            <div class="question__text">
+                                В чем различие коллекций, полученных в результате методов:
+                                <br/>getElementByTagName и querySelectorAll?
+                            </div>
+                            <div class="question__options">
+                                <div class="option option__1">
+                                    <input type="radio" id="opt-1-3" name="q3">
+                                    <label for="opt-1-3">Во втором меньше символов</label>
+                                </div>
+                                <div class="option option__2">
+                                    <input type="radio" id="opt-2-3" name="q3">
+                                    <label for="opt-2-3">Первый - старый и проверенный временем способ</label>
+                                </div>
+                                <div class="option option__3" data-correct="true">
+                                    <input type="radio" id="opt-3-3" name="q3">
+                                    <label for="opt-3-3" correct>Вторая коллекция может перебираться FOR EACH</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question question__4">
+                            <div class="question__text">Выберите правильное утверждение:</div>
+                            <div class="question__options">
+                                <div class="option option__1" data-correct="true">
+                                    <input type="radio" id="opt-1-4" name="q4">
+                                    <label for="opt-1-4" correct>Цикл FOR IN для объектов, FOR OF для массивоподобных сущностей</label>
+                                </div>
+                                <div class="option option__2">
+                                    <input type="radio" id="opt-2-4" name="q4">
+                                    <label for="opt-2-4">Цикл FOR OF для объектов, FOR IN для массивоподобных сущностей</label>
+                                </div>
+                                <div class="option option__3">
+                                    <input type="radio" id="opt-3-4" name="q4">
+                                    <label for="opt-3-4">Оба этих метода можно использовать при работе с объектами</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question question__5">
+                            <div class="question__text">
+                                Вызов какого метода покажет элемент, на котором произошло событие?
+                            </div>
+                            <div class="question__options">
+                                <div class="option option__1">
+                                    <input type="radio" id="opt-1-5" name="q5">
+                                    <label for="opt-1-5">event.type</label>
+                                </div>
+                                <div class="option option__2" data-correct="true">
+                                    <input type="radio" id="opt-2-5" name="q5">
+                                    <label for="opt-2-5">event.target</label>
+                                </div>
+                                <div class="option option__3">
+                                    <input type="radio" id="opt-3-5" name="q5">
+                                    <label for="opt-3-5">event.currentTarget</label>
+                                </div>
+                            </div>
+                        </div>
+
+                </div>
+
+                <button class="btn btn-check">Проверить</button>
+
+                <p class="quality"></p>
+                
+            </div>
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
