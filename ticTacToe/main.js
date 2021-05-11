@@ -48,13 +48,19 @@ const gameClickHandler = (e) => {
             if (checkCombines('zero')) {
                 whichSymbol.textContent = '❂';
             }
-        } else if (!(checkCombines('cross')) && !(checkCombines('zero')) && evenOdd === 9) {
-            gameField.removeEventListener('click', gameClickHandler);
-            whichSymbol.textContent = '';
-            infoTxt.textContent = 'It is a draw';
-            infoTxt.style.color = 'rgb(189, 135, 250)';
+        } else if (evenOdd == 9) {
             e.target.textContent = '☠';
-            restartBtn.classList.add('pulse');
+            e.target.setAttribute('data-symbol', 'cross');
+            if (checkCombines('cross')) {
+                whichSymbol.textContent = '☠';
+            } else {
+                gameField.removeEventListener('click', gameClickHandler);
+                whichSymbol.textContent = '';
+                infoTxt.textContent = 'It is a draw';
+                infoTxt.style.color = 'rgb(189, 135, 250)';
+                e.target.textContent = '☠';
+                restartBtn.classList.add('pulse');
+            }
         }
     }
 }
