@@ -13,7 +13,7 @@ for (let i = 0; i < 9; i++) {
 // Arr from 9 game rectangles
 const rects = document.querySelectorAll('.game-rect');
 
-// Variable for determining the click
+// Variable to determine the parity of the click
 let evenOdd = 0;
 
 // Winning combinations
@@ -28,6 +28,8 @@ const winCombines = [
     [rects[2], rects[4], rects[6]]
 ];
 
+
+//Function with actions after each click
 const gameClickHandler = (e) => {
 
     if (e.target.classList.contains('game-rect') && !e.target.hasAttribute('data-symbol')) {
@@ -62,7 +64,7 @@ gameField.addEventListener('click', gameClickHandler);
 // Check symbols inside combinations
 function checkCombines(symbol) {
     let hasWinner = false;
-    //Find in each win line symbol in every rectangle
+    //In each win line we check symbol in every rectangle
     winCombines.forEach(winLine => {
         const isWin = winLine.every(rect => rect.dataset.symbol === symbol);
         if (isWin) {
