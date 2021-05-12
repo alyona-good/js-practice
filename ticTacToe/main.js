@@ -51,7 +51,7 @@ const gameClickHandler = (e) => {
         } else if (evenOdd == 9) {
             e.target.textContent = '☠';
             e.target.setAttribute('data-symbol', 'cross');
-            if (checkCombines('cross')) {
+            if (checkCombines('cross')) { //Remove bag with draw
                 whichSymbol.textContent = '☠';
             } else {
                 gameField.removeEventListener('click', gameClickHandler);
