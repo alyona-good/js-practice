@@ -35,7 +35,7 @@ const gameClickHandler = (e) => {
     if (e.target.classList.contains('game-rect') && !e.target.hasAttribute('data-symbol')) {
         evenOdd++;
 
-        if (evenOdd % 2 === 1) {
+        if (evenOdd % 2 === 1 && evenOdd !== 9) {
 
             e.target.textContent = '☠';
             e.target.setAttribute('data-symbol', 'cross');
@@ -46,7 +46,7 @@ const gameClickHandler = (e) => {
                 whichSymbol.textContent = '☠';
             }
 
-        } else if (evenOdd % 2 === 0) {
+        } else if (evenOdd % 2 === 0 && evenOdd !== 9) {
             e.target.textContent = '❂';
             e.target.setAttribute('data-symbol', 'zero');
 
@@ -57,6 +57,9 @@ const gameClickHandler = (e) => {
             }
 
         } else if (evenOdd == 9) {
+
+            e.target.textContent = '☠';
+            e.target.setAttribute('data-symbol', 'cross');
 
             if (checkCombines('cross')) { //Remove bag with draw
                 whichSymbol.textContent = '☠';
