@@ -46,7 +46,7 @@ const gameClickHandler = (e) => {
                 whichSymbol.textContent = '☠';
             }
 
-        } else if (evenOdd % 2 === 0 && evenOdd !== 9) {
+        } else if (evenOdd % 2 === 0) {
             e.target.textContent = '❂';
             e.target.setAttribute('data-symbol', 'zero');
 
@@ -56,7 +56,7 @@ const gameClickHandler = (e) => {
                 whichSymbol.textContent = '❂';
             }
 
-        } else if (evenOdd == 9) {
+        } else if (evenOdd === 9) {
 
             e.target.textContent = '☠';
             e.target.setAttribute('data-symbol', 'cross');
